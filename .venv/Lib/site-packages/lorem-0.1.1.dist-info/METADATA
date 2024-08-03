@@ -1,0 +1,91 @@
+Metadata-Version: 2.0
+Name: lorem
+Version: 0.1.1
+Summary: Generator for random text that looks like Latin.
+Home-page: https://github.com/sfischer13/python-lorem
+Author: Stefan Fischer
+Author-email: sfischer13@ymail.com
+License: MIT
+Keywords: lorem ipsum random text placeholder
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Linguistic
+
+====================
+Python Lorem Package
+====================
+
+.. image:: https://img.shields.io/pypi/v/lorem.svg
+        :target: https://pypi.python.org/pypi/lorem
+
+.. image:: https://img.shields.io/travis/sfischer13/python-lorem.svg
+        :target: https://travis-ci.org/sfischer13/python-lorem
+
+
+Summary
+-------
+
+Generator for random text that looks like Latin.
+
+Simple Example
+--------------
+
+.. code:: python
+
+    import lorem
+
+    s = lorem.sentence()  # 'Eius dolorem dolorem labore neque.'
+    p = lorem.paragraph()
+    t = lorem.text()
+
+Complex Example
+---------------
+
+.. code:: python
+
+    from lorem.text import TextLorem
+
+    # separate words by '-'
+    # sentence length should be between 2 and 3
+    # choose words from A, B, C and D
+    lorem = TextLorem(wsep='-', srange=(2,3), words="A B C D".split())
+
+    s1 = lorem.sentence()  # 'C-B.'
+    s2 = lorem.sentence()  # 'C-A-C.'
+
+
+=======
+History
+=======
+
+0.1.1 (2016-06-18)
+------------------
+
+* Update documentation
+
+0.1.0 (2016-06-17)
+------------------
+
+* Minimum viable product
+
+0.0.1 (2016-06-14)
+------------------
+
+* First release on PyPI.
+
+
